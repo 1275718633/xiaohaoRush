@@ -3,10 +3,13 @@ package com.example.springboot.controller;
 import com.example.springboot.service.IDemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 
 /**
  * @author Liuzhonghao
@@ -26,6 +29,7 @@ public class DemoController {
     public int[] bubbleSoft(HttpServletRequest request){
         int[] arry = {5,88,9,8,7,22,33,6,7};
         arry = demoService.bubbleSoft(arry,request.getParameter("type"));
+        new ArrayList<>();
         return arry;
     }
 }
